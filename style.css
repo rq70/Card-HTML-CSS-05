@@ -1,0 +1,42 @@
+* {    margin: 0;    padding: 0;    outline: none;}
+  :root{    --color-primary:#16384c;    --color-secondary:#fff; --font-primary:Tanha;  }
+  @font-face {
+    font-family: Tanha;    src: url(fonts/eot/Tanha-FD.eot), url(fonts/ttf/Tanha-FD.eot),
+    url(fonts/woff/Tanha-FD.woff),    url(fonts/woff2/Tanha-FD.woff2);
+  }
+  body {  font-family:var(--font-primary),'Roboto';  background-color: var(--color-primary);}
+  .container{    position: relative; display: flex; 
+    justify-content: center; align-items: center;    height: 100vh; width: 100%;
+  }
+  .card{    position: relative;    width: 350px;    color: var(--color-primary);
+    background-color: var(--color-secondary);    margin: 30px 10px;    display: flex;
+    flex-direction: column;    box-shadow: 0 5px 10px rgb(0 0 0 / 50%); border: 1px solid;
+    transition: 0.4s ease-in-out;  height: auto;  border-radius: 10px;
+    align-items: center; z-index: 1;  }
+  .card:hover{  cursor: pointer; transform: scale(1.1);  }
+  .card::before ,.card::after{  font-family: 'Font Awesome 6 free';  content: '\f10e';
+    position: absolute;  font-size: 60pt;  font-weight: 600;  color: #5d7c8f;
+    transition: .5s ease-in-out;
+  }
+  .card::before{    right: -70px;    top: -40px;  }
+  .card::after{    content: '\f10d';    left: -70px;    bottom: -40px;  }
+  .card:hover.card::before{    right: 0;    top: 0;    opacity: 0;  }
+  .card:hover.card::after{    left: 0;    bottom: 0;    opacity: 0;  }
+  .imgbx{    position: relative;    width: 100%;    height:100px;    overflow: hidden;
+    display: flex;    justify-content: center; padding:10px 0 ;background-color: #5d7c8f;
+    border-radius: 8px 8px 0 0;
+  }
+  .imgbx img{  height: 100px; width: 100px;  transition: .3s ease-in-out; border-radius: 100%;
+    border: 1px solid ;
+  }
+  .card:hover .imgbx::before{  top: -120px;  left: 400px; }
+  .content{  position: relative; text-align: center;  transition: .4s ease-in-out;
+    overflow: hidden;}
+  .content .social{  width: 100%;  background-color: #5d7c8f;  margin-top: 80px;
+    margin-bottom: -100px;  border-radius: 0 0 8px 8px; transition: .5s ease-in-out;
+  }
+  .card:hover .content .social{
+    margin-bottom: 0;
+  }
+  .content .social ul{  display: flex;  justify-content: space-around;
+  list-style-type: none;  padding: 10px 0;  }
